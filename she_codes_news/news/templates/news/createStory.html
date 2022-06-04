@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<!-- <h4>Submit Your Story Here. Please fill in all fields</h4> -->
 <form action="" method="post">
     {% csrf_token %}
+<div class="form-item">
     {{ form.as_p }}
+</div>
+<div class="form-item" id="submit-button">
     <input type="submit" value="Submit Your Story">
+</div>
 </form>
 
 {% endblock %}
